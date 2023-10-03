@@ -1,25 +1,17 @@
 let originalTitle = document.title;
-let intervalId;
 
 document.getElementById('startButton').addEventListener('click', function () {
-    playSoundRandomly(parseInt(document.getElementById('intervalSelect').value))
+    let interval = parseInt(document.getElementById('intervalSelect').value);
+    playSoundRandomly(interval)
+    setInterval(() => { playSoundRandomly(interval) }, interval)
     document.getElementById('startButton').disabled = true;
 });
 
+// Wait a random amount of time before playing the sound
 function playSoundRandomly(interval) {
-    playAudio();
-
-    // Play sound at random time within the interval
-    const randomTime = getRandomTime(interval);
-    console.log(randomTime)
-    // Clear any existing intervals
-    clearInterval(intervalId);
-
-    // Play sound at random time within the interval
-    intervalId = setTimeout(() => {
-        playSoundRandomly(interval)
-        document.title = 'CHECK YOUR POSTURE!!!';
-    }, randomTime);
+    const randomTime = Math.floor(Math.random() * interval);
+    console.log(randomTime);
+    setTimeout(playAudio, randomTime);
 }
 
 
@@ -34,8 +26,6 @@ function playAudio() {
     const audio = document.getElementById('audio');
     audio.currentTime = 0;
     audio.play();
-}
 
-function getRandomTime(interval) {
-    return Math.floor(Math.random() * interval);
+    document.title = 'CHECK YOUR POSTURE!!!';
 }
