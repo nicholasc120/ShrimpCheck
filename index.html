@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦐🍤🦐🍤🦐</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bahiana&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="display-1">SHRIMP CHECK</h1>
+        <div class="form-group">
+            <label for="intervalSelect">Select Interval:</label>
+            <select class="form-control" id="intervalSelect">
+                <option value="60000">1 minute</option>
+                <option value="600000">10 minutes</option>
+                <option value="900000">15 minutes</option>
+                <option value="1800000">30 minutes</option>
+                <option value="3600000">1 hour</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" id="startButton">Start</button>
+    </div>
+
+    <div class="gif-container">
+        <iframe src="https://giphy.com/embed/3o7buikVSfLTuXjbC8" width="480" height="320" frameBorder="0"
+            class="giphy-embed" allowFullScreen></iframe>
+    </div>
+
+    <audio id="audio" preload="auto">
+        <source src="audio.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

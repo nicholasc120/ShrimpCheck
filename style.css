@@ -1,0 +1,35 @@
+body {
+    margin: 50px;
+    background-image: repeating-linear-gradient(45deg, #f9f9f9, #f9f9f9 10px, #f7c7a9 10px, #f7c7a9 20px);
+}
+
+/* Adjust spacing */
+.row {
+    margin-bottom: 10px;
+}
+
+/* Center button vertically */
+.col-sm-6 button {
+    margin-top: 32px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.gif {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+}
