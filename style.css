@@ -8,6 +8,10 @@ body {
     margin-bottom: 10px;
 }
 
+p {
+    background-color: white;
+}
+
 /* Center button vertically */
 .col-sm-6 button {
     margin-top: 32px;
